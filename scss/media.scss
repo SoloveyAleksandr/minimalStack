@@ -1,0 +1,52 @@
+@media (min-height: 800px) {
+    body {
+        overflow: hidden;
+    }
+    .stack-animation {
+        display: block;
+    }
+}
+@media (min-width: 768px) {
+    html {
+        font-size: 18px;
+    }
+    .menu__title {
+        text-align: center;
+    }
+    .menu-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__item {
+            margin: 40px;
+        }
+    }
+    .stack__title {
+        text-align: center;
+    }
+    .stack-list {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &__item {
+            margin: 5px 15px;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    html {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 1320px) {
+    html {
+        font-size: 22px;
+    }
+}
+@media (min-width: 1440px) {
+    html {
+        font-size: 24px;
+    }
+}
