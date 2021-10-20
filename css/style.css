@@ -362,6 +362,21 @@ body {
           transform: rotateY(0deg) translateZ(110px);
   -webkit-transition: all .3s;
   transition: all .3s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  cursor: default;
+}
+
+.side::after {
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  background-color: rgba(17, 17, 17, 0.98);
+  top: 0;
+  left: 0;
+  -webkit-transform: translateZ(-1px);
+          transform: translateZ(-1px);
 }
 
 .front {
@@ -374,6 +389,11 @@ body {
           transform: translateZ(130px);
 }
 
+.front:hover {
+  -webkit-transform: translateZ(120px);
+          transform: translateZ(120px);
+}
+
 .back {
   -webkit-transform: rotateY(180deg) translateZ(110px);
           transform: rotateY(180deg) translateZ(110px);
@@ -382,6 +402,11 @@ body {
 .back.active {
   -webkit-transform: rotateY(180deg) translateZ(130px);
           transform: rotateY(180deg) translateZ(130px);
+}
+
+.back:hover {
+  -webkit-transform: rotateY(180deg) translateZ(120px);
+          transform: rotateY(180deg) translateZ(120px);
 }
 
 .right {
@@ -394,6 +419,11 @@ body {
           transform: rotateY(90deg) translateZ(130px);
 }
 
+.right:hover {
+  -webkit-transform: rotateY(90deg) translateZ(120px);
+          transform: rotateY(90deg) translateZ(120px);
+}
+
 .left {
   -webkit-transform: rotateY(-90deg) translateZ(110px);
           transform: rotateY(-90deg) translateZ(110px);
@@ -402,6 +432,11 @@ body {
 .left.active {
   -webkit-transform: rotateY(-90deg) translateZ(130px);
           transform: rotateY(-90deg) translateZ(130px);
+}
+
+.left:hover {
+  -webkit-transform: rotateY(-90deg) translateZ(120px);
+          transform: rotateY(-90deg) translateZ(120px);
 }
 
 .top {
@@ -414,6 +449,11 @@ body {
           transform: rotateX(90deg) translateZ(130px);
 }
 
+.top:hover {
+  -webkit-transform: rotateX(90deg) translateZ(120px);
+          transform: rotateX(90deg) translateZ(120px);
+}
+
 .bottom {
   -webkit-transform: rotateX(-90deg) translateZ(110px);
           transform: rotateX(-90deg) translateZ(110px);
@@ -422,5 +462,105 @@ body {
 .bottom.active {
   -webkit-transform: rotateX(-90deg) translateZ(130px);
           transform: rotateX(-90deg) translateZ(130px);
+}
+
+.bottom:hover {
+  -webkit-transform: rotateX(-90deg) translateZ(120px);
+          transform: rotateX(-90deg) translateZ(120px);
+}
+
+.buttons-wrapper {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+}
+
+.cube-buttons {
+  width: 150px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateX(45deg);
+          transform: rotateX(45deg);
+}
+
+.cube-buttons__btn {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #d4d4d4;
+  border-radius: 8px;
+  background-color: transparent;
+  margin: 5px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-shadow: 0 8px 3px white;
+          box-shadow: 0 8px 3px white;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.cube-buttons__btn.active {
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  -webkit-box-shadow: 0 3px 3px white;
+          box-shadow: 0 3px 3px white;
+}
+
+.cube-buttons__btn::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  display: block;
+  border-top: 2px solid #d4d4d4;
+  border-left: 2px solid #d4d4d4;
+}
+
+.arrow-up {
+  margin: 5px 50px;
+}
+
+.arrow-up::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.arrow-left::before {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.arrow-down::before {
+  -webkit-transform: rotate(-135deg);
+          transform: rotate(-135deg);
+}
+
+.arrow-right::before {
+  -webkit-transform: rotate(135deg);
+          transform: rotate(135deg);
+}
+
+.buttons-title {
+  text-align: center;
 }
 /*# sourceMappingURL=style.css.map */
