@@ -45,6 +45,20 @@
   .stack-list__item {
     margin: 5px 15px;
   }
+  .buttons-wrapper {
+    display: block;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    -webkit-perspective: 500px;
+            perspective: 500px;
+  }
+  .cube {
+    -webkit-transform: rotateY(22deg) rotateX(12deg);
+            transform: rotateY(22deg) rotateX(12deg);
+    -webkit-animation: none;
+            animation: none;
+  }
 }
 
 @media (min-width: 1024px) {
