@@ -306,6 +306,19 @@ body {
     box-shadow      : 0 0 8px rgb(212, 212, 212);
     transform       : rotateY(0deg) translateZ(110px);
     transition      : all .3s;
+    transform-style : preserve-3d;
+    cursor          : default;
+
+    &::after {
+        content         : '';
+        position        : absolute;
+        width           : inherit;
+        height          : inherit;
+        background-color: rgba(17, 17, 17, 0.98);
+        top             : 0;
+        left            : 0;
+        transform       : translateZ(-1px);
+    }
 }
 
 .front {
@@ -313,6 +326,10 @@ body {
 
     &.active {
         transform: translateZ(130px);
+    }
+
+    &:hover {
+        transform: translateZ(120px);
     }
 }
 
@@ -322,6 +339,10 @@ body {
     &.active {
         transform: rotateY(180deg) translateZ(130px);
     }
+
+    &:hover {
+        transform: rotateY(180deg) translateZ(120px);
+    }
 }
 
 .right {
@@ -329,6 +350,10 @@ body {
 
     &.active {
         transform: rotateY(90deg) translateZ(130px);
+    }
+
+    &:hover {
+        transform: rotateY(90deg) translateZ(120px);
     }
 }
 
@@ -338,6 +363,10 @@ body {
     &.active {
         transform: rotateY(-90deg) translateZ(130px);
     }
+
+    &:hover {
+        transform: rotateY(-90deg) translateZ(120px);
+    }
 }
 
 .top {
@@ -345,6 +374,10 @@ body {
 
     &.active {
         transform: rotateX(90deg) translateZ(130px);
+    }
+
+    &:hover {
+        transform: rotateX(90deg) translateZ(120px);
     }
 }
 
@@ -354,4 +387,84 @@ body {
     &.active {
         transform: rotateX(-90deg) translateZ(130px);
     }
+
+    &:hover {
+        transform: rotateX(-90deg) translateZ(120px);
+    }
+}
+
+.buttons-wrapper {
+    position   : relative;
+    width      : 150px;
+    height     : 150px;
+    perspective: 500px;
+}
+
+.cube-buttons {
+    width          : 150px;
+    display        : flex;
+    flex-wrap      : wrap;
+    align-items    : center;
+    justify-content: center;
+    transform-style: preserve-3d;
+    transform: rotateX(45deg);
+
+    &__btn {
+        width           : 40px;
+        height          : 40px;
+        border          : 2px solid rgb(212, 212, 212);
+        border-radius   : 8px;
+        background-color: transparent;
+        margin          : 5px;
+        position        : relative;
+        display         : flex;
+        align-items     : center;
+        justify-content : center;
+        box-shadow: 0 8px 3px rgb(255, 255, 255);
+        transition: .3s;
+        &.active {
+            transform: translateY(5px);
+            box-shadow: 0 3px 3px rgb(255, 255, 255);
+        }
+
+        &::before {
+            content    : '';
+            position   : absolute;
+            width      : 10px;
+            height     : 10px;
+            display    : block;
+            border-top : 2px solid rgb(212, 212, 212);
+            border-left: 2px solid rgb(212, 212, 212);
+        }
+    }
+}
+
+.arrow-up {
+    margin: 5px 50px;
+
+    &::before {
+        transform: rotate(45deg);
+    }
+}
+
+.arrow-left {
+    &::before {
+        transform: rotate(-45deg);
+    }
+}
+
+.arrow-down {
+    &::before {
+        transform: rotate(-135deg);
+    }
+}
+
+.arrow-right {
+    &::before {
+        transform: rotate(135deg);
+    }
+}
+
+.buttons-title {
+    text-align: center;
 }
