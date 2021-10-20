@@ -20,6 +20,9 @@ const allSides = document.querySelectorAll('.side');
 
 document.onkeydown = function (e) {
     if (e.key.includes('Arrow')) {
+        arrowBtns.forEach(btn => {
+            btn.classList.remove('active');
+        })
         if (e.key === 'ArrowLeft') {
             rotateY -= 2;
             arrowLeft.classList.add('active');
@@ -57,4 +60,3 @@ document.onkeyup = function (e) {
     }
 };
 
-//mobile
