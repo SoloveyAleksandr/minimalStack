@@ -2,35 +2,56 @@
     body {
         overflow: hidden;
     }
+
     .stack-animation {
         display: block;
     }
 }
+
 @media (min-width: 768px) {
     html {
         font-size: 18px;
     }
+
     .menu__title {
         text-align: center;
     }
+
     .menu-list {
-        display: flex;
-        align-items: center;
+        display        : flex;
+        align-items    : center;
         justify-content: center;
+
         &__item {
             margin: 40px;
         }
     }
+
     .stack__title {
         text-align: center;
     }
+
     .stack-list {
-        display: flex;
-        align-items: center;
+        display        : flex;
+        align-items    : center;
         justify-content: center;
+
         &__item {
             margin: 5px 15px;
         }
+    }
+
+    .buttons-wrapper {
+        display: block;
+        position   : relative;
+        width      : 150px;
+        height     : 150px;
+        perspective: 500px;
+    }
+
+    .cube {
+        transform: rotateY(22deg) rotateX(12deg);
+        animation: none;
     }
 }
 
@@ -38,6 +59,7 @@
     html {
         font-size: 20px;
     }
+
 }
 
 @media (min-width: 1320px) {
@@ -45,6 +67,7 @@
         font-size: 22px;
     }
 }
+
 @media (min-width: 1440px) {
     html {
         font-size: 24px;
