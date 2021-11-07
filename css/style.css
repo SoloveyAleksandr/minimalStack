@@ -1,3 +1,7 @@
+* {
+  cursor: none;
+}
+
 html {
   font-family: "Arial", sans-serif;
   font-size: 16px;
@@ -52,7 +56,6 @@ body {
   width: 40px;
   height: 40px;
   margin-left: auto;
-  cursor: pointer;
 }
 
 .menu-btn__burger, .menu-btn__burger::before, .menu-btn__burger::after {
@@ -102,8 +105,8 @@ body {
 }
 
 .menu-list__link {
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   display: block;
 }
 
@@ -400,15 +403,14 @@ body {
           box-shadow: 0 0 8px #d4d4d4;
   -webkit-transform: rotateY(0deg) translateZ(110px);
           transform: rotateY(0deg) translateZ(110px);
-  -webkit-transition: all .3s;
-  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
-  cursor: default;
 }
 
 .side::after {
-  content: '';
+  content: "";
   position: absolute;
   width: inherit;
   height: inherit;
@@ -551,8 +553,8 @@ body {
           justify-content: center;
   -webkit-box-shadow: 0 8px 3px white;
           box-shadow: 0 8px 3px white;
-  -webkit-transition: .3s;
-  transition: .3s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .cube-buttons__btn.active {
@@ -563,7 +565,7 @@ body {
 }
 
 .cube-buttons__btn::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 10px;
   height: 10px;
@@ -598,5 +600,129 @@ body {
 
 .buttons-title {
   text-align: center;
+}
+
+.circle {
+  display: none;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, 0.068);
+  border-radius: 50%;
+  position: absolute;
+}
+
+.circle_smoll {
+  width: 10px;
+  height: 10px;
+  -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.circle-1 {
+  z-index: 1000;
+  width: 30px;
+  height: 30px;
+  background-color: #e4e4e4;
+  -webkit-box-shadow: inset 0px 0px 4px 3px silver;
+          box-shadow: inset 0px 0px 4px 3px silver;
+}
+
+.circle-2 {
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-animation: circleAnimLeft 3s linear infinite;
+          animation: circleAnimLeft 3s linear infinite;
+}
+
+.circle-3 {
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-animation: circleAnimRight 4s linear infinite;
+          animation: circleAnimRight 4s linear infinite;
+}
+
+.circle-4 {
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-animation: circleAnimLeft 5s linear infinite;
+          animation: circleAnimLeft 5s linear infinite;
+}
+
+.circle-5 {
+  -webkit-transform-origin: left bottom;
+          transform-origin: left bottom;
+  -webkit-animation: circleAnimLeft 6s linear infinite;
+          animation: circleAnimLeft 6s linear infinite;
+}
+
+.circle-6 {
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-animation: circleAnimRight 2s linear infinite;
+          animation: circleAnimRight 2s linear infinite;
+}
+
+.circle-7 {
+  -webkit-transform-origin: right top;
+          transform-origin: right top;
+  -webkit-animation: circleAnimLeft 5s linear infinite;
+          animation: circleAnimLeft 5s linear infinite;
+}
+
+.circle-8 {
+  -webkit-transform-origin: right bottom;
+          transform-origin: right bottom;
+  -webkit-animation: circleAnimRight 4s linear infinite;
+          animation: circleAnimRight 4s linear infinite;
+}
+
+.circle-9 {
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-animation: circleAnimRight 3s linear infinite;
+          animation: circleAnimRight 3s linear infinite;
+}
+
+@-webkit-keyframes circleAnimLeft {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes circleAnimLeft {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes circleAnimRight {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes circleAnimRight {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
 }
 /*# sourceMappingURL=style.css.map */
