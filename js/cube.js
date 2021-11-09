@@ -97,6 +97,46 @@ document.onmousedown = (e) => {
     rotateCube();
 }
 
+// to touchscreen
+
+document.ontouchstart = (e) => {
+    document.ontouchend = () => {
+        clearInterval(moove);
+        arrowBtns.forEach(btn => btn.classList.remove('active'));
+    };
+    const target = e.target;
+    let moove;
+    if (target === arrowLeft) {
+        moove = setInterval(() => {
+            rotateY -= 2;
+            rotateCube();
+        }, 60);
+        arrowLeft.classList.add('active');
+    }
+    else if (target === arrowUp) {
+        moove = setInterval(() => {
+            rotateX -= 2;
+            rotateCube();
+        }, 60);
+        arrowUp.classList.add('active');
+    }
+    else if (target === arrowRight) {
+        moove = setInterval(() => {
+            rotateY += 2;
+            rotateCube();
+        }, 60);
+        arrowRight.classList.add('active');
+    }
+    else if (target === arrowDown) {
+        moove = setInterval(() => {
+            rotateX += 2;
+            rotateCube();
+        }, 60);
+        arrowDown.classList.add('active');
+    }
+    rotateCube();
+}
+
 function rotateCube() {
     cube.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg)`;
 }
