@@ -2,9 +2,6 @@
   body {
     overflow: hidden;
   }
-  .stack-animation {
-    display: block;
-  }
 }
 
 @media (min-width: 768px) {
@@ -46,22 +43,23 @@
     margin: 5px 15px;
   }
   .buttons-wrapper {
-    display: block;
-    position: relative;
-    width: 150px;
-    height: 150px;
-    -webkit-perspective: 500px;
-            perspective: 500px;
+    margin: 0;
   }
-  .cube {
-    -webkit-transform: rotateY(22deg) rotateX(12deg);
-            transform: rotateY(22deg) rotateX(12deg);
-    -webkit-animation: none;
-            animation: none;
+  .stack-box {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
 }
 
 @media (min-width: 1024px) {
+  * {
+    cursor: none;
+  }
   html {
     font-size: 20px;
   }

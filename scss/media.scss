@@ -2,10 +2,6 @@
     body {
         overflow: hidden;
     }
-
-    .stack-animation {
-        display: block;
-    }
 }
 
 @media (min-width: 768px) {
@@ -42,23 +38,28 @@
     }
 
     .buttons-wrapper {
-        display: block;
-        position   : relative;
-        width      : 150px;
-        height     : 150px;
-        perspective: 500px;
+        margin: 0;
     }
-
-    .cube {
-        transform: rotateY(22deg) rotateX(12deg);
-        animation: none;
+    
+    .stack-box {
+        flex-direction: row;
+        justify-content: space-evenly;
     }
+    // .cube {
+    //     transform: rotateY(22deg) rotateX(12deg);
+    //     animation: none;
+    // }
 }
 
 @media (min-width: 1024px) {
+    * {
+        cursor: none;
+    }
+
     html {
         font-size: 20px;
     }
+
     .circle {
         display: block;
     }

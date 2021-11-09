@@ -1,5 +1,5 @@
 * {
-  cursor: none;
+  cursor: default;
 }
 
 html {
@@ -11,6 +11,7 @@ html {
 
 body {
   min-height: 100vh;
+  overflow: hidden;
 }
 
 .container {
@@ -169,12 +170,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .bugs-line {
@@ -333,44 +338,6 @@ body {
   }
 }
 
-@-webkit-keyframes cube-animation {
-  0% {
-    -webkit-transform: rotateY(22deg) rotateX(12deg);
-            transform: rotateY(22deg) rotateX(12deg);
-  }
-  33% {
-    -webkit-transform: rotateY(-727deg) rotateX(45deg);
-            transform: rotateY(-727deg) rotateX(45deg);
-  }
-  66% {
-    -webkit-transform: rotateY(-1455deg) rotateX(-45deg);
-            transform: rotateY(-1455deg) rotateX(-45deg);
-  }
-  100% {
-    -webkit-transform: rotateY(-2182deg) rotateX(12deg);
-            transform: rotateY(-2182deg) rotateX(12deg);
-  }
-}
-
-@keyframes cube-animation {
-  0% {
-    -webkit-transform: rotateY(22deg) rotateX(12deg);
-            transform: rotateY(22deg) rotateX(12deg);
-  }
-  33% {
-    -webkit-transform: rotateY(-727deg) rotateX(45deg);
-            transform: rotateY(-727deg) rotateX(45deg);
-  }
-  66% {
-    -webkit-transform: rotateY(-1455deg) rotateX(-45deg);
-            transform: rotateY(-1455deg) rotateX(-45deg);
-  }
-  100% {
-    -webkit-transform: rotateY(-2182deg) rotateX(12deg);
-            transform: rotateY(-2182deg) rotateX(12deg);
-  }
-}
-
 .cube-wrapper {
   position: relative;
   width: 200px;
@@ -386,8 +353,6 @@ body {
           transform-style: preserve-3d;
   -webkit-transform: rotateY(22deg) rotateX(12deg);
           transform: rotateY(22deg) rotateX(12deg);
-  -webkit-animation: cube-animation 46s linear infinite;
-          animation: cube-animation 46s linear infinite;
 }
 
 .side {
@@ -512,7 +477,13 @@ body {
 }
 
 .buttons-wrapper {
-  display: none;
+  display: block;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  margin-top: 50px;
 }
 
 .cube-buttons {
@@ -605,19 +576,20 @@ body {
 .circle {
   display: none;
   pointer-events: none;
-  border: 1px solid rgba(255, 255, 255, 0.068);
-  border-radius: 50%;
   position: absolute;
 }
 
 .circle_smoll {
-  width: 10px;
-  height: 10px;
+  font-size: 11px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.068);
   -webkit-transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .circle-1 {
+  border: 1px solid rgba(255, 255, 255, 0.068);
+  border-radius: 50%;
   z-index: 1000;
   width: 30px;
   height: 30px;
@@ -629,57 +601,57 @@ body {
 .circle-2 {
   -webkit-transform-origin: left top;
           transform-origin: left top;
-  -webkit-animation: circleAnimLeft 3s linear infinite;
-          animation: circleAnimLeft 3s linear infinite;
+  -webkit-animation: circleAnimLeft 6s linear infinite;
+          animation: circleAnimLeft 6s linear infinite;
 }
 
 .circle-3 {
   -webkit-transform-origin: left top;
           transform-origin: left top;
-  -webkit-animation: circleAnimRight 4s linear infinite;
-          animation: circleAnimRight 4s linear infinite;
+  -webkit-animation: circleAnimRight 5s linear infinite;
+          animation: circleAnimRight 5s linear infinite;
 }
 
 .circle-4 {
   -webkit-transform-origin: left top;
           transform-origin: left top;
-  -webkit-animation: circleAnimLeft 5s linear infinite;
-          animation: circleAnimLeft 5s linear infinite;
+  -webkit-animation: circleAnimLeft 6s linear infinite;
+          animation: circleAnimLeft 6s linear infinite;
 }
 
 .circle-5 {
   -webkit-transform-origin: left bottom;
           transform-origin: left bottom;
-  -webkit-animation: circleAnimLeft 6s linear infinite;
-          animation: circleAnimLeft 6s linear infinite;
+  -webkit-animation: circleAnimLeft 7s linear infinite;
+          animation: circleAnimLeft 7s linear infinite;
 }
 
 .circle-6 {
   -webkit-transform-origin: left top;
           transform-origin: left top;
-  -webkit-animation: circleAnimRight 2s linear infinite;
-          animation: circleAnimRight 2s linear infinite;
+  -webkit-animation: circleAnimRight 5s linear infinite;
+          animation: circleAnimRight 5s linear infinite;
 }
 
 .circle-7 {
   -webkit-transform-origin: right top;
           transform-origin: right top;
-  -webkit-animation: circleAnimLeft 5s linear infinite;
-          animation: circleAnimLeft 5s linear infinite;
+  -webkit-animation: circleAnimLeft 6s linear infinite;
+          animation: circleAnimLeft 6s linear infinite;
 }
 
 .circle-8 {
   -webkit-transform-origin: right bottom;
           transform-origin: right bottom;
-  -webkit-animation: circleAnimRight 4s linear infinite;
-          animation: circleAnimRight 4s linear infinite;
+  -webkit-animation: circleAnimRight 5s linear infinite;
+          animation: circleAnimRight 5s linear infinite;
 }
 
 .circle-9 {
   -webkit-transform-origin: left top;
           transform-origin: left top;
-  -webkit-animation: circleAnimRight 3s linear infinite;
-          animation: circleAnimRight 3s linear infinite;
+  -webkit-animation: circleAnimRight 6s linear infinite;
+          animation: circleAnimRight 6s linear infinite;
 }
 
 @-webkit-keyframes circleAnimLeft {

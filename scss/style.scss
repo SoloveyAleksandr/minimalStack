@@ -1,47 +1,47 @@
 @import "vars";
 
 * {
-    cursor: none;
+    cursor: default;
 }
 
 html {
-    font-family: "Arial", sans-serif;
-    font-size: 16px;
-    color: $ac-color;
+    font-family     : "Arial", sans-serif;
+    font-size       : 16px;
+    color           : $ac-color;
     background-color: $bg-color;
 }
 
 body {
     min-height: 100vh;
-    // overflow-x: hidden;
+    overflow  : hidden;
 }
 
 .container {
     max-width: 1170px;
-    margin: 0 auto;
-    padding: 0 15px;
+    margin   : 0 auto;
+    padding  : 0 15px;
 }
 
 .section-title {
-    font-weight: 900;
-    font-size: 1.5rem;
-    line-height: 28px;
+    font-weight   : 900;
+    font-size     : 1.5rem;
+    line-height   : 28px;
     letter-spacing: 0.5rem;
-    text-shadow: 0 0 6px rgba(255, 255, 255, 0.4);
+    text-shadow   : 0 0 6px rgba(255, 255, 255, 0.4);
 }
 
 .menu {
     &__box {
-        position: fixed;
-        overflow: auto;
-        height: 100vh;
-        width: 100vw;
-        top: -150vh;
-        left: 0;
+        position        : fixed;
+        overflow        : auto;
+        height          : 100vh;
+        width           : 100vw;
+        top             : -150vh;
+        left            : 0;
         background-color: $bg-color;
-        z-index: 900;
-        transition: 0.3s;
-        padding-top: 87px;
+        z-index         : 900;
+        transition      : 0.3s;
+        padding-top     : 87px;
     }
 }
 
@@ -50,28 +50,28 @@ body {
 }
 
 .menu-btn-wrapper {
-    width: 100%;
+    width   : 100%;
     position: fixed;
-    padding: 15px 15px 0;
-    z-index: 1000;
+    padding : 15px 15px 0;
+    z-index : 1000;
 }
 
 .menu-btn {
-    width: 40px;
-    height: 40px;
+    width      : 40px;
+    height     : 40px;
     margin-left: auto;
 
     &__burger,
     &__burger::before,
     &__burger::after {
-        position: absolute;
-        content: "";
-        width: 40px;
-        height: 6px;
-        background: #484848;
-        box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+        position     : absolute;
+        content      : "";
+        width        : 40px;
+        height       : 6px;
+        background   : #484848;
+        box-shadow   : 4px 4px 4px rgba(0, 0, 0, 0.25);
         border-radius: 6px;
-        transition: 0.3s;
+        transition   : 0.3s;
     }
 
     &__burger {
@@ -92,7 +92,7 @@ body {
 
             &::before,
             &::after {
-                top: 0px;
+                top      : 0px;
                 transform: rotate(-90deg);
             }
         }
@@ -103,18 +103,18 @@ body {
     list-style: none;
 
     &__item {
-        margin: 30px;
+        margin   : 30px;
         font-size: 3.125rem;
-        color: $ac-color_pale;
+        color    : $ac-color_pale;
     }
 
     &__link {
         transition: 0.3s;
-        display: block;
+        display   : block;
 
         &:hover {
-            color: $ac-color;
-            transform: scale(1.1);
+            color      : $ac-color;
+            transform  : scale(1.1);
             text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
         }
     }
@@ -125,16 +125,16 @@ body {
 
     &__title {
         font-weight: 500;
-        font-size: 1.87rem;
+        font-size  : 1.87rem;
         line-height: 2rem;
-        text-align: right;
+        text-align : right;
     }
 
     &__subtitle {
-        font-weight: 400;
-        font-size: 1.25rem;
-        line-height: 1.4rem;
-        text-align: right;
+        font-weight  : 400;
+        font-size    : 1.25rem;
+        line-height  : 1.4rem;
+        text-align   : right;
         margin-bottom: 1.2rem;
     }
 }
@@ -157,51 +157,52 @@ body {
 
 .stack {
     &__title {
-        display: block;
-        margin-bottom: 130px;
-        font-weight: 900;
-        font-size: 1.4rem;
-        line-height: 1.6rem;
+        display       : block;
+        margin-bottom : 130px;
+        font-weight   : 900;
+        font-size     : 1.4rem;
+        line-height   : 1.6rem;
         text-transform: uppercase;
-        text-shadow: 8px 8px 2px rgb(26, 26, 26);
+        text-shadow   : 8px 8px 2px rgb(26, 26, 26);
     }
 }
 
 .stack-box {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    display        : flex;
+    flex-direction : column;
+    align-items    : center;
+    justify-content: center;
 }
 
 .bugs-line {
-    width: 100%;
-    height: 1px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1000;
+    width           : 100%;
+    height          : 1px;
+    position        : absolute;
+    top             : 0;
+    left            : 0;
+    z-index         : 1000;
     background-color: transparent;
-    position: absolute;
-    pointer-events: none;
+    position        : absolute;
+    pointer-events  : none;
 }
 
 .bugs-line-animation-number-1 {
-    top: 15%;
+    top      : 15%;
     animation: bug-anim 5s ease-in 3s infinite;
 }
 
 .bugs-line-animation-number-2 {
-    top: 48%;
+    top      : 48%;
     animation: bug-anim 3s linear 2s infinite;
 }
 
 .bugs-line-animation-number-3 {
-    top: 80%;
+    top      : 80%;
     animation: bug-anim 8s ease 5s infinite;
 }
 
 .bugs-line-animation-number-4 {
-    top: 97%;
+    top      : 97%;
     animation: bug-anim 1s ease-out 4s infinite;
 }
 
@@ -283,62 +284,43 @@ body {
     }
 }
 
-@keyframes cube-animation {
-    0% {
-        transform: rotateY(22deg) rotateX(12deg);
-    }
-
-    33% {
-        transform: rotateY(-727deg) rotateX(45deg);
-    }
-
-    66% {
-        transform: rotateY(-1455deg) rotateX(-45deg);
-    }
-
-    100% {
-        transform: rotateY(-2182deg) rotateX(12deg);
-    }
-}
-
 .cube-wrapper {
-    position: relative;
-    width: 200px;
-    height: 200px;
+    position   : relative;
+    width      : 200px;
+    height     : 200px;
     perspective: 500px;
 }
 
 .cube {
-    width: inherit;
-    height: inherit;
+    width          : inherit;
+    height         : inherit;
     transform-style: preserve-3d;
-    transform: rotateY(22deg) rotateX(12deg);
-    animation: cube-animation 46s linear infinite;
+    transform      : rotateY(22deg) rotateX(12deg);
 }
 
 .side {
-    position: absolute;
-    width: inherit;
-    height: inherit;
-    border: 2px solid rgb(212, 212, 212);
-    font-size: 38px;
-    text-align: center;
-    line-height: 200px;
+    position        : absolute;
+    width           : inherit;
+    height          : inherit;
+    border          : 2px solid rgb(212, 212, 212);
+    font-size       : 38px;
+    text-align      : center;
+    line-height     : 200px;
     background-color: rgba(17, 17, 17, 0.98);
-    box-shadow: 0 0 8px rgb(212, 212, 212);
-    transform: rotateY(0deg) translateZ(110px);
-    transition: all 0.3s;
-    transform-style: preserve-3d;
+    box-shadow      : 0 0 8px rgb(212, 212, 212);
+    transform       : rotateY(0deg) translateZ(110px);
+    transition      : all 0.3s;
+    transform-style : preserve-3d;
 
     &::after {
-        content: "";
-        position: absolute;
-        width: inherit;
-        height: inherit;
+        content         : "";
+        position        : absolute;
+        width           : inherit;
+        height          : inherit;
         background-color: rgba(17, 17, 17, 0.98);
-        top: 0;
-        left: 0;
-        transform: translateZ(-1px);
+        top             : 0;
+        left            : 0;
+        transform       : translateZ(-1px);
     }
 }
 
@@ -415,44 +397,49 @@ body {
 }
 
 .buttons-wrapper {
-    display: none;
+    display    : block;
+    position   : relative;
+    width      : 150px;
+    height     : 150px;
+    perspective: 500px;
+    margin-top: 50px;
 }
 
 .cube-buttons {
-    width: 150px;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    width          : 150px;
+    display        : flex;
+    flex-wrap      : wrap;
+    align-items    : center;
     justify-content: center;
     transform-style: preserve-3d;
-    transform: rotateX(45deg);
+    transform      : rotateX(45deg);
 
     &__btn {
-        width: 40px;
-        height: 40px;
-        border: 2px solid rgb(212, 212, 212);
-        border-radius: 8px;
+        width           : 40px;
+        height          : 40px;
+        border          : 2px solid rgb(212, 212, 212);
+        border-radius   : 8px;
         background-color: transparent;
-        margin: 5px;
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 8px 3px rgb(255, 255, 255);
-        transition: 0.3s;
+        margin          : 5px;
+        position        : relative;
+        display         : flex;
+        align-items     : center;
+        justify-content : center;
+        box-shadow      : 0 8px 3px rgb(255, 255, 255);
+        transition      : 0.3s;
 
         &.active {
-            transform: translateY(5px);
+            transform : translateY(5px);
             box-shadow: 0 3px 3px rgb(255, 255, 255);
         }
 
         &::before {
-            content: "";
-            position: absolute;
-            width: 10px;
-            height: 10px;
-            display: block;
-            border-top: 2px solid rgb(212, 212, 212);
+            content    : "";
+            position   : absolute;
+            width      : 10px;
+            height     : 10px;
+            display    : block;
+            border-top : 2px solid rgb(212, 212, 212);
             border-left: 2px solid rgb(212, 212, 212);
         }
     }
@@ -489,71 +476,83 @@ body {
 }
 
 .circle {
-    display: none;
+    display       : none;
     pointer-events: none;
-    border: 1px solid rgba(255, 255, 255, 0.068);
-    border-radius: 50%;
-    position: absolute;
+    position      : absolute;
 }
 
 .circle_smoll {
-    width: 10px;
-    height: 10px;
-    transition: all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    font-size  : 11px;
+    font-weight: 900;
+    color      : rgba(255, 255, 255, 0.068);
+    transition : all .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 .circle-1 {
-    z-index: 1000;
-    width: 30px;
-    height: 30px;
+    border          : 1px solid rgba(255, 255, 255, 0.068);
+    border-radius   : 50%;
+    z-index         : 1000;
+    width           : 30px;
+    height          : 30px;
     background-color: rgb(228, 228, 228);
-    box-shadow: inset 0px 0px 4px 3px rgb(192, 192, 192);
+    box-shadow      : inset 0px 0px 4px 3px rgb(192, 192, 192);
 }
 
 .circle-2 {
     transform-origin: left top;
-    animation: circleAnimLeft 3s linear infinite;
+    animation       : circleAnimLeft 6s linear infinite;
 }
+
 .circle-3 {
     transform-origin: left top;
-    animation: circleAnimRight 4s linear infinite;
+    animation       : circleAnimRight 5s linear infinite;
 }
+
 .circle-4 {
     transform-origin: left top;
-    animation: circleAnimLeft 5s linear infinite;
+    animation       : circleAnimLeft 6s linear infinite;
 }
+
 .circle-5 {
     transform-origin: left bottom;
-    animation: circleAnimLeft 6s linear infinite;
+    animation       : circleAnimLeft 7s linear infinite;
 }
+
 .circle-6 {
     transform-origin: left top;
-    animation: circleAnimRight 2s linear infinite;
+    animation       : circleAnimRight 5s linear infinite;
 }
+
 .circle-7 {
     transform-origin: right top;
-    animation: circleAnimLeft 5s linear infinite;
+    animation       : circleAnimLeft 6s linear infinite;
 }
+
 .circle-8 {
     transform-origin: right bottom;
-    animation: circleAnimRight 4s linear infinite;
+    animation       : circleAnimRight 5s linear infinite;
 }
+
 .circle-9 {
     transform-origin: left top;
-    animation: circleAnimRight 3s linear infinite;
+    animation       : circleAnimRight 6s linear infinite;
 }
+
 @keyframes circleAnimLeft {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
 }
+
 @keyframes circleAnimRight {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(-360deg);
     }
